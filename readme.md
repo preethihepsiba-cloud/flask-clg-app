@@ -41,6 +41,17 @@ flask-clg-app/
 ---
 
 ## 🚀 Deployment Guide (Debian / Ubuntu VM)
+Configure Firewall (Google Cloud / VM)
+Go to VPC-->Firewall-->Add Firewall Rule
+Name: gunicorn-rule
+Direction: Ingress
+Target: All instances
+Source IP Range: 0.0.0.0/0
+Protocol: TCP
+Port: 5000
+
+VM --> Networking --> Network Tags
+Tag your VM with gunicorn-rule to apply the rule.
 
 ### 1️⃣ Update and Install Dependencies
 
@@ -67,22 +78,11 @@ python3
 >>> exit()
 This will create a studentdb.sqlite3 file in the project folder.
 
-5️⃣ Configure Firewall (Google Cloud / VM)
-Go to VPC-->Firewall-->Add Firewall Rule
-Name: gunicorn-rule
-Direction: Ingress
-Target: All instances
-Source IP Range: 0.0.0.0/0
-Protocol: TCP
-Port: 5000
-
-VM --> Networking --> Network Tags
-Tag your VM with gunicorn-rule to apply the rule.
-
-6️⃣ Run the App with Gunicorn
-source venv/bin/activate
+5️⃣ Run the App with Gunicorn
 gunicorn -b 0.0.0.0:5000 app:app
-The app will be available on your external IP:
+
+
+6️⃣ The app will be available on your external IP:
 
 http://[EXTERNAL-IP]/
 
