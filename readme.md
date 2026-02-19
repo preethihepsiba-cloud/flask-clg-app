@@ -84,7 +84,7 @@ gunicorn -b 0.0.0.0:5000 app:app
 
 6️⃣ The app will be available on your external IP:
 
-http://[EXTERNAL-IP]/
+http://[EXTERNAL-IP]:5000/
 
 7️⃣ Access URLs
 Home / Index: /
