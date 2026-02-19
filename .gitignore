@@ -1,0 +1,17 @@
+# Uploads folder contents (keep folder with .gitkeep)
+static/uploads/*
+!static/uploads/.gitkeep
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# SQLite database
+studentdb.sqlite3
