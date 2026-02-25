@@ -61,7 +61,7 @@ sudo apt install python3-venv python3-full -y
 sudo apt install git -y
 
 2️⃣ Clone the Repository
-git clone https://github.com/preethihepsiba-cloud/flask-clg-app.git
+sudo git clone https://github.com/preethihepsiba-cloud/flask-clg-app.git
 cd flask-clg-app
 
 3️⃣ Set up Python Virtual Environment
